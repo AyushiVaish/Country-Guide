@@ -6,6 +6,7 @@ const request = require('request')
 app.use(cors({origin:true}))
 
 app.get('/:place', (req, res,next) => {
+	const place=req.params.place;
     var options = {
         url:`https://restcountries.eu/rest/v2/name/${place}`,
         headers: {
@@ -13,7 +14,7 @@ app.get('/:place', (req, res,next) => {
             'content-type': 'application/json'
 			
         }
-    };
+    }
     function callback(error, response, body) {
         if(!error && response.statusCode === 200) {
             res.send(JSON.parse(body));
