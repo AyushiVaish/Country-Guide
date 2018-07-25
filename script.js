@@ -6,7 +6,7 @@ function checkCountry(){
     
     
     
-    var queryURL = `https://restcountries.eu/rest/v2/name/${search}`;
+    var queryURL = "http://localhost:5000/" + search;
     
     // make AJAX request using fetch API
     fetch(queryURL)
