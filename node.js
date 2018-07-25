@@ -7,7 +7,7 @@ app.use(cors({origin:true}))
 
 app.get('/:place', (req, res,next) => {
     var options = {
-        url:`https://`restcountries.eu/rest/v2/name${place}`,
+        url:`https://restcountries.eu/rest/v2/name/${place}`,
         headers: {
 			'User-Agent' : 'My Web Server' ,
             'content-type': 'application/json'
